@@ -44,6 +44,7 @@ function calculadora(){//Insere o Codigo HTML
                                     '<td><input class="buttonCalc" type="button" value="8" onclick="insert(8)"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="7" onclick="insert(7)"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="-" onclick="insert('+sub+')"></td>'+
+                                    '<td><input class="buttonCalc" type="button" value="Pi" onclick="pi()"></td>'+
                                 '</tr>'+
                                 '<tr>'+
                                     '<td><input class="buttonCalc" type="button" value="6" onclick="insert(6)"></td>'+
@@ -79,6 +80,9 @@ function equal(){//Executa toda a instrução
         document.form.textview.value= eval(exp);
         document.form.textviewMostra.value=mostraEquacao+' =';
     }
+}
+function pi(){
+     document.form.textview.value= Math.PI.toFixed(2); 
 }
 function limpa(){//Apaga tudo
     document.form.textview.value="";
