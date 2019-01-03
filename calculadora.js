@@ -1,7 +1,8 @@
 function calculadora(){//Insere o Codigo HTML
     var main= document.getElementById("main");
     if(main.style.display=="none"){
-        var ponto="'.'";var soma="'+'";var sub="'-'";var mult="'*'";var divi="'/'";var aspa="'('";var aspf="')'";
+        var ponto="'.'";var soma="'+'";var sub="'-'";var mult="'*'";
+        var divi="'/'";var aspa="'('";var aspf="')'";var raiz="'Math.sqrt('";
         var _calcView=
                     '<style>'+
                         '.buttonCalc{'+
@@ -34,7 +35,7 @@ function calculadora(){//Insere o Codigo HTML
                                 '<tr>'+
                                     '<td><input class="buttonCalc" type="button" value="C" onclick="limpa()"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="<" onclick="back()"></td>'+
-                                    '<td><input class="buttonCalc" type="button" value="/" onclick="insert('+divi+')"></td>'+
+                                    '<td><input class="buttonCalc" type="button" value="&divide;" onclick="insert('+divi+')"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="x" onclick="insert('+mult+')"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="(" onclick="insert('+aspa+')"></td>'+
                                     '<td><input class="buttonCalc" type="button" value=")" onclick="insert('+aspf+')"></td>'+
@@ -44,7 +45,8 @@ function calculadora(){//Insere o Codigo HTML
                                     '<td><input class="buttonCalc" type="button" value="8" onclick="insert(8)"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="7" onclick="insert(7)"></td>'+
                                     '<td><input class="buttonCalc" type="button" value="-" onclick="insert('+sub+')"></td>'+
-                                    '<td><input class="buttonCalc" type="button" value="Pi" onclick="pi()"></td>'+
+                                    '<td><input class="buttonCalc" type="button" value="&prod;" onclick="pi()"></td>'+
+                                    '<td><input class="buttonCalc" type="button" value="&radic;" onclick="insert('+raiz+')"></td>'+
                                 '</tr>'+
                                 '<tr>'+
                                     '<td><input class="buttonCalc" type="button" value="6" onclick="insert(6)"></td>'+
@@ -82,7 +84,7 @@ function equal(){//Executa toda a instrução
     }
 }
 function pi(){
-     document.form.textview.value= Math.PI.toFixed(2); 
+    document.form.textview.value= Math.PI.toFixed(2); 
 }
 function limpa(){//Apaga tudo
     document.form.textview.value="";
